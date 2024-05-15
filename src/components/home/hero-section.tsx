@@ -74,32 +74,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                         <MessagePopup
                             avatar={Avatar1}
                             message="Price please?"
-                            position1="-bottom-3"
-                            position2="left-[25px]"
+                            position1="-bottom-2"
+                            position2="left-[30px]"
                         />
                     </div>
-                    <div className="absolute bottom-[20px] right-[80%] block md:hidden">
+                    <div className="absolute bottom-[20px] right-[80%] block  md:hidden">
                         <MessagePopup
                             avatar={Avatar2}
                             message="This jacket looks🔥"
-                            position1="-bottom-3"
-                            position2="left-[25px]"
+                            position1="-bottom-2"
+                            position2="left-[30px]"
                         />
                     </div>
                     <div className="absolute left-[80%] top-[10px] block md:hidden">
                         <MessagePopup
                             avatar={Avatar3}
                             message="How do I order this?"
-                            position1="-bottom-3"
-                            position2="right-[20px]"
+                            position1="-bottom-2"
+                            position2="right-[10px]"
                         />
                     </div>
                     <div className="absolute bottom-[20px] left-[80%] block md:hidden">
                         <MessagePopup
                             avatar={Avatar4}
                             message="Can I get a sample?"
-                            position1="-top-3"
-                            position2="right-[20px]"
+                            position1="-top-1"
+                            position2="right-[15px]"
                         />
                     </div>
 

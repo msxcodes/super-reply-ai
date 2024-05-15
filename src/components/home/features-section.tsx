@@ -143,10 +143,10 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({}) => {
                             key={idx}
                             className="flex flex-col items-center text-center"
                         >
-                            <div className="relative flex  font-sharp-grotesk text-2xl">
+                            <div className="relative flex  font-sharp-grotesk text-2xl font-medium">
                                 {item.num}
                                 <span
-                                    className={`absolute -right-[${item.right}%] bottom-[20%] h-[0.8rem] w-[0.9rem]`}
+                                    className={`absolute -right-[20%] bottom-[22%] h-[0.8rem] w-[0.9rem]`}
                                 >
                                     <Image
                                         className="h-full w-full"
@@ -182,12 +182,12 @@ const NUM_DATA: { num: number; text: string; right: number }[] = [
     {
         num: 10,
         text: "Social Engagement",
-        right: 12,
+        right: 25,
     },
     {
         num: 50,
         text: "Faster Addressal of Intent",
-        right: 12,
+        right: 25,
     },
 ];
 
