@@ -149,7 +149,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
 
                             <div className="flex items-center justify-center gap-2 pb-2 md:flex-col md:gap-3">
                                 <Image
-                                    className="flex w-20 items-center justify-center"
+                                    className="flex w-16 items-center justify-center xs:w-[5.5rem]"
                                     alt=""
                                     width={123}
                                     height={45}
@@ -159,7 +159,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                                 <AvatarStack />
                                 <div>
                                     <FiveStar />
-                                    <div className="font-space-grotesk text-xs">
+                                    <div className="font-space-grotesk  text-[0.5rem] xs:text-xs">
                                         100+ Brands & Creators
                                     </div>
                                 </div>

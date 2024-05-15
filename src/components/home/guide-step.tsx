@@ -65,7 +65,7 @@ export const GuideStep: React.FC<StepsSectionProps> = ({
                 <div className="flex h-[200px] max-h-min items-center justify-center ">
                     <div className="flex h-full flex-col  gap-4 rounded-3xl pt-6 shadow-xl ">
                         <div className="flex h-full flex-col space-y-2 px-8">
-                            <div className="gap-2 font-sharp-grotesk text-[1.3rem] font-semibold leading-8">
+                            <div className="gap-2 font-sharp-grotesk text-[1.14rem] font-semibold leading-6 xs:text-[1.3rem] xs:leading-7">
                                 <span className="">Step </span>
                                 <GradientText
                                     className="font-sharp-grotesk italic"
@@ -73,7 +73,7 @@ export const GuideStep: React.FC<StepsSectionProps> = ({
                                 />
                                 <span> {stepName}</span>
                             </div>
-                            <p className="text-md flex items-center justify-center font-sf-pro-display leading-5">
+                            <p className="text-md flex items-center justify-center pb-4 font-sf-pro-display leading-5">
                                 {description}
                             </p>
                         </div>

@@ -137,25 +137,24 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({}) => {
                         ))}
                     </div>
                 </SectionContainer>
-                <div className="flex items-center  justify-between bg-black px-2 py-4 pb-6 text-white md:hidden">
+                <div className="flex items-center bg-black px-2 py-4 pb-6 text-white md:hidden">
                     {NUM_DATA.map((item, idx) => (
                         <div
                             key={idx}
-                            className="flex flex-col items-center justify-around   text-center "
+                            className="flex flex-col items-center text-center"
                         >
-                            <div className="relative flex justify-center font-sharp-grotesk text-2xl font-semibold">
+                            <div className="relative flex  font-sharp-grotesk text-2xl">
                                 {item.num}
                                 <span
                                     className={`absolute -right-[${item.right}%] bottom-[20%] h-[0.8rem] w-[0.9rem]`}
                                 >
                                     <Image
-                                        className="h-full w-full "
+                                        className="h-full w-full"
                                         src={X}
                                         alt=""
                                     />
                                 </span>
                             </div>
-                            <br />
                             <span className=" px-4 font-sf-pro-display text-sm font-normal leading-4 md:text-lg">
                                 {" "}
                                 {item.text}
@@ -178,17 +177,17 @@ const NUM_DATA: { num: number; text: string; right: number }[] = [
     {
         num: 8,
         text: "Conversion Rates",
-        right: 35,
+        right: 25,
     },
     {
         num: 10,
         text: "Social Engagement",
-        right: 15,
+        right: 12,
     },
     {
         num: 50,
         text: "Faster Addressal of Intent",
-        right: 15,
+        right: 12,
     },
 ];
 

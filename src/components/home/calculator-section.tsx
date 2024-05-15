@@ -33,7 +33,7 @@ export const CalculatorSection: React.FC<CalculatorSectionProps> = ({}) => {
     return (
         <section className=" w-full bg-black px-6  text-center font-bold ">
             <SectionContainer>
-                <h2 className="mb-12 mt-[-1.5rem] font-sharp-grotesk  text-[1.5rem] font-semibold leading-7 text-white md:mb-20 lg:text-4xl">
+                <h2 className="mb-12 mt-[-1.5rem] font-sharp-grotesk  text-[1.3rem] font-semibold leading-6 text-white xs:text-[1.5rem] xs:leading-7 md:mb-20 lg:text-4xl">
                     Convert every <br className="block md:hidden" /> interaction
                     into
                     <br className="" />
@@ -43,7 +43,7 @@ export const CalculatorSection: React.FC<CalculatorSectionProps> = ({}) => {
                     <Card className=" flex-1 rounded-xl border-none bg-gradient-to-l from-[#E11C93] to-[#F0D9CA] md:rounded-3xl">
                         <div className="m-[3px] rounded-xl bg-white md:rounded-3xl md:px-4 md:py-6">
                             <CardHeader className="flex flex-row items-center justify-between">
-                                <CardTitle className="font-sf-pro-display text-lg md:text-2xl">
+                                <CardTitle className="font-sf-pro-display text-[1rem] xs:text-lg md:text-2xl">
                                     Comments per post
                                 </CardTitle>
                                 <div className="w-[100px] rounded-lg bg-gradient-to-l from-[#E11C93] to-[#F0D9CA] p-[3px] md:w-36">
@@ -88,7 +88,7 @@ export const CalculatorSection: React.FC<CalculatorSectionProps> = ({}) => {
                     <Card className=" flex-1 rounded-xl border-none bg-gradient-to-l from-[#E11C93] to-[#F0D9CA] md:rounded-3xl">
                         <div className="m-[3px] rounded-xl bg-white md:rounded-3xl md:px-4 md:py-6">
                             <CardHeader className="flex flex-row items-center justify-between">
-                                <CardTitle className="font-sf-pro-display text-lg md:text-2xl">
+                                <CardTitle className="font-sf-pro-display text-[1rem] xs:text-lg md:text-2xl ">
                                     Average Order Value
                                 </CardTitle>
                                 <div className="relative w-[100px] rounded-lg bg-gradient-to-l from-[#E11C93] to-[#F0D9CA] p-[3px] md:w-36">

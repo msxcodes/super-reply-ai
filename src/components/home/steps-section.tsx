@@ -47,11 +47,11 @@ export const StepsSection: React.FC<StepsSectionProps> = ({}) => {
                                 key={item.num}
                                 className="rounded-3xl border-none shadow-2xl md:w-[30%] md:px-8"
                             >
-                                <CardHeader className="gap-10">
-                                    <CardDescription className="gradient-primary-light md:h-38 md:w-38 mx-auto h-[130px] w-[130px] rounded-full">
+                                <CardHeader className="gap-1 py-4 pt-8">
+                                    <CardDescription className="gradient-primary-light md:h-38 md:w-38 mx-auto mb-6 h-[140px] w-[140px] rounded-full ">
                                         <Image src={item.image} alt=""></Image>
                                     </CardDescription>
-                                    <CardTitle className="flex items-baseline gap-2 font-sharp-grotesk text-[34px] font-semibold md:text-[40px]">
+                                    <CardTitle className="flex items-baseline gap-2 px-6 font-sharp-grotesk text-[34px] font-semibold md:px-0 md:text-[40px]">
                                         Step
                                         <div className="w-33 h-57">
                                             <Image
@@ -61,20 +61,21 @@ export const StepsSection: React.FC<StepsSectionProps> = ({}) => {
                                             ></Image>
                                         </div>
                                     </CardTitle>
+                                    <CardContent className="font-sf-pro-display text-[18px] font-normal leading-5 md:px-0">
+                                        {item.text}
+                                    </CardContent>
                                 </CardHeader>
-                                <CardContent className="font-sf-pro-display text-[22px] font-normal">
-                                    {item.text}
-                                </CardContent>
+
                                 <CardFooter />
                             </Card>
                         );
                     })}
                 </div>
-                <div className="mb-10 mt-20 text-center">
+                <div className="mb-2 mt-12 text-center">
                     <Button
                         asChild
                         size={"lg"}
-                        className="rounded-full font-space-grotesk text-2xl md:px-16 md:py-8 md:text-3xl"
+                        className="rounded-full px-12 py-6 font-space-grotesk text-xl font-[500] md:px-16 md:py-8 md:text-3xl"
                     >
                         <Link href={"/signin"}>Get Started</Link>
                     </Button>
@@ -93,7 +94,7 @@ const CARDS_DATA = [
     },
     {
         num: 2,
-        text: "Use 10+ Templates to achieve goals like sales, lead collections, grievance management etc.",
+        text: "Use 10+ Workflows to achieve goals like sales, lead collections, grievance management etc.",
         image: Growth2,
         number: Two,
     },

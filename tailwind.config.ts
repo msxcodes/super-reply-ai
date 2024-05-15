@@ -19,7 +19,7 @@ const config = {
         },
         extend: {
             screens: {
-                xs: "468px",
+                xs: "400px",
             },
             fontFamily: {
                 "sharp-grotesk": ["var(--font-sharp-grotesk)"],
