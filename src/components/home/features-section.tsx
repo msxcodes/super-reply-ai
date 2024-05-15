@@ -137,24 +137,26 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({}) => {
                         ))}
                     </div>
                 </SectionContainer>
-                <div className="flex items-center justify-between gap-5 bg-black p-3 text-white md:hidden">
+                <div className="flex items-center  justify-between bg-black px-2 py-4 pb-6 text-white md:hidden">
                     {NUM_DATA.map((item, idx) => (
                         <div
                             key={idx}
-                            className="flex flex-col items-center justify-around text-center"
+                            className="flex flex-col items-center justify-around   text-center "
                         >
-                            <span className="relative flex font-sharp-grotesk text-3xl">
+                            <div className="relative flex justify-center font-sharp-grotesk text-2xl font-semibold">
                                 {item.num}
-                                <span className="absolute -right-[35%] bottom-[10%] h-5 w-5">
+                                <span
+                                    className={`absolute -right-[${item.right}%] bottom-[20%] h-[0.8rem] w-[0.9rem]`}
+                                >
                                     <Image
-                                        className="h-full w-full"
+                                        className="h-full w-full "
                                         src={X}
                                         alt=""
                                     />
                                 </span>
-                            </span>
+                            </div>
                             <br />
-                            <span className="-mt-5 font-sf-pro-display text-sm font-normal md:text-lg">
+                            <span className=" px-4 font-sf-pro-display text-sm font-normal leading-4 md:text-lg">
                                 {" "}
                                 {item.text}
                             </span>
@@ -172,18 +174,21 @@ F0D9CB
 B65CDE
 */
 
-const NUM_DATA: { num: number; text: string }[] = [
+const NUM_DATA: { num: number; text: string; right: number }[] = [
     {
         num: 8,
         text: "Conversion Rates",
+        right: 35,
     },
     {
         num: 10,
         text: "Social Engagement",
+        right: 15,
     },
     {
         num: 50,
         text: "Faster Addressal of Intent",
+        right: 15,
     },
 ];
 

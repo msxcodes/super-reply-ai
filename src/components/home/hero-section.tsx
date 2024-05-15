@@ -104,8 +104,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                     </div>
 
                     <div className="py-10 text-center md:px-10">
-                        <div className="flex items-center justify-center gap-2 md:translate-y-[7px] md:gap-4">
-                            <h1 className="font-sharp-grotesk text-3xl font-semibold sm:text-3xl md:text-5xl lg:text-6xl">
+                        <div className="flex items-center justify-center gap-2 md:translate-y-[7px] md:gap-4 md:px-0">
+                            <h1 className="font-sharp-grotesk text-[1.7rem] font-semibold leading-7 sm:text-3xl md:text-5xl lg:text-6xl">
                                 Turn your
                                 {/* <GradientText text="Instagram" /> */}
                             </h1>
@@ -120,18 +120,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                                 src={InstagramImage}
                                 alt="Instagram"
                                 height={50}
-                                width={175}
+                                width={130}
                                 className="flex md:hidden"
                             />
                         </div>
-                        <span className="font-sharp-grotesk text-3xl font-semibold sm:text-3xl md:text-5xl lg:text-6xl">
+                        <span className="font-sharp-grotesk text-[1.65rem] font-semibold  leading-7 sm:text-3xl md:text-5xl lg:text-6xl">
                             engagement into
                         </span>{" "}
                         <br className="md:hidden" />
-                        <span className="font-sharp-grotesk text-3xl font-semibold text-black sm:text-3xl md:text-5xl lg:text-6xl">
+                        <span className="font-sharp-grotesk text-[1.7rem] font-semibold leading-8 text-black sm:text-3xl md:text-5xl lg:text-6xl">
                             {" $$$"}
                         </span>
-                        <h2 className="text-md mx-5 my-5 font-sf-pro-display font-normal md:mx-0 md:mb-10 md:text-2xl">
+                        <h2 className="text-md mx-5 my-2 mb-6 font-sf-pro-display font-normal md:mx-0 md:mb-10 md:text-2xl">
                             Convert every interaction into{" "}
                             <br className="block md:hidden" /> sales of leads
                             with <br className="hidden md:block" />
@@ -142,19 +142,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                             <Button
                                 asChild
                                 size={"lg"}
-                                className="rounded-full px-16 py-8 font-space-grotesk text-3xl"
+                                className="rounded-full px-12 py-6 font-space-grotesk text-xl font-[500] md:px-16 md:py-8 md:text-3xl md:font-normal"
                             >
                                 <Link href={"/signin"}>Get Started</Link>
                             </Button>
-                            <Image
-                                className="flex items-center justify-center"
-                                alt=""
-                                width={123}
-                                height={45}
-                                src={MetaLogo}
-                                unoptimized
-                            ></Image>
-                            <div className="flex items-center justify-center gap-2 pb-2 md:gap-3">
+
+                            <div className="flex items-center justify-center gap-2 pb-2 md:flex-col md:gap-3">
+                                <Image
+                                    className="flex w-20 items-center justify-center"
+                                    alt=""
+                                    width={123}
+                                    height={45}
+                                    src={MetaLogo}
+                                    unoptimized
+                                ></Image>
                                 <AvatarStack />
                                 <div>
                                     <FiveStar />
