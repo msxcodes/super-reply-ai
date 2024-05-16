@@ -37,14 +37,19 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
         //     : setBtn(false),
         // console.log(box.scrollLeft);
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center md:mb-0 md:flex-row">
+            <div className="relative flex snap-center flex-col items-center justify-center  md:mb-0 md:h-[100vh] md:flex-row">
                 <div
                     ref={boxRef}
-                    className="custom-scrollbar main-container mx-2 flex w-[100%] snap-x snap-mandatory items-start overflow-x-hidden overflow-y-hidden  scroll-smooth md:mb-10 md:block md:h-[80vh] md:w-[100%] md:snap-y md:snap-mandatory md:flex-col md:items-center md:justify-center md:gap-6 md:overflow-x-auto md:overflow-y-auto"
+                    className="custom-scrollbar main-container mx-2 flex w-[100%] snap-x snap-mandatory items-start overflow-x-hidden overflow-y-hidden scroll-smooth md:mb-10 md:block md:h-[100%] md:w-[100%] md:snap-y md:snap-mandatory md:flex-col md:items-center md:justify-center md:gap-6 md:overflow-x-auto md:overflow-y-auto"
                 >
-                    <div className="snap-center snap-always">
+                    <div className="snap-center snap-always ">
                         <GuideStep
                             stepNum={"1 :"}
                             stepName={"Comment"}
@@ -58,7 +63,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                             }
                         />
                     </div>
-                    <div className="snap-center snap-always">
+                    <div className="snap-center snap-always ">
                         <GuideStep
                             stepNum={"2 :"}
                             stepName={"Automated Reply & DM"}
@@ -72,7 +77,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                             }
                         />
                     </div>
-                    <div className="snap-center snap-always">
+                    <div className="snap-center snap-always ">
                         <GuideStep
                             stepNum={"3 :"}
                             stepName={"Sales Conversion"}

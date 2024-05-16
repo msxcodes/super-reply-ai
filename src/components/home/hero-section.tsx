@@ -19,8 +19,8 @@ interface HeroSectionProps {}
 export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
     return (
         <>
-            <section className="pt-4 md:pt-16">
-                <SectionContainer className="relative">
+            <section className=" pt-4 md:pt-16">
+                <SectionContainer className="relative ">
                     <div className="absolute right-[80%] top-[50px] hidden md:block">
                         <MessagePopup
                             avatar={Avatar0}
