@@ -89,13 +89,13 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
             <div className="mx-8 grid grid-cols-2 gap-2  rounded-full bg-[#FDEDF1] px-2 py-2 md:hidden">
                 <div
                     onClick={leftArrowHandler}
-                    className={`flex items-center justify-center rounded-full bg-[${"#e11c93"}]`}
+                    className={`flex items-center justify-center rounded-full bg-[#e11c93]`}
                 >
                     <Image src={LeftArrow} className="py-4" alt="" />
                 </div>
                 <div
                     onClick={rightArrowHandler}
-                    className={`flex w-full items-center justify-center rounded-full bg-[${"#e11c93"}]`}
+                    className={`flex w-full items-center justify-center rounded-full bg-[#e11c93]`}
                 >
                     <Image src={RightArrow} alt="" className="py-4" />
                 </div>
