@@ -21,6 +21,8 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
     const [isBtn, setIsBtn] = useState<boolean>(false);
     const [btnColorLeft, setBtnColorLeft] = useState<string>("#e11c9259");
     const [btnColorRight, setBtnColorRight] = useState<string>("#e11c93");
+    const [imgSrcLeft, setImgSrcLeft] = useState(LeftArrowLight);
+    const [imgSrcRight, setImgSrcRight] = useState(RightArrow);
     console.log(btnColorRight);
     console.log(btnColorLeft);
 
@@ -31,17 +33,24 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
             setBtnColorLeft("#e11c93");
             setBtnColorRight("#e11c93");
             setIsBtn(false);
+            setImgSrcLeft(LeftArrow);
+            setImgSrcRight(RightArrow);
         } else if (boxWidth == clientWidth) {
             setBtnColorRight("#e11c9259");
             setIsBtn(true);
+            setImgSrcRight(RightArrowLight);
         } else if (boxWidth == clientWidth * 2 - 2) {
             setBtnColorLeft("#e11c93");
             setBtnColorRight("#e11c93");
             setIsBtn(false);
+            setImgSrcLeft(LeftArrow);
+            setImgSrcRight(RightArrow);
         } else if (boxWidth < clientWidth) {
             setBtnColorLeft("#e11c9259");
             setBtnColorRight("#e11c93");
             setIsBtn(false);
+            setImgSrcLeft(LeftArrowLight);
+            setImgSrcRight(RightArrow);
         }
     };
 
@@ -64,11 +73,6 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
             console.log("scrool - " + box.scrollLeft),
             console.log("width - " + box.clientWidth));
     };
-
-    // useEffect(() => {
-    //     setBtnColorLeft("#e11c9259");
-    //     setBtnColorRight("#e11c93");
-    // });
 
     return (
         <>
@@ -128,7 +132,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                     style={{ backgroundColor: `${btnColorLeft}` }}
                 >
                     <Image
-                        src={LeftArrowLight}
+                        src={imgSrcLeft}
                         className="py-3"
                         alt=""
                         width={20}
@@ -142,7 +146,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                     style={{ backgroundColor: `${btnColorRight}` }}
                 >
                     <Image
-                        src={RightArrow}
+                        src={imgSrcRight}
                         alt=""
                         className="py-3"
                         width={20}
