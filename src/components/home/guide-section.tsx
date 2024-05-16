@@ -19,32 +19,58 @@ interface StepsSectionProps {}
 export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
     const boxRef = useRef();
     const [isBtn, setIsBtn] = useState<boolean>(false);
+    const [btnColorLeft, setBtnColorLeft] = useState<string>("#e11c9259");
+    const [btnColorRight, setBtnColorRight] = useState<string>("#e11c93");
+    console.log(btnColorRight);
+    console.log(btnColorLeft);
+
+    const btnColorHandler = (boxWidth: number, clientWidth: number) => {
+        const double = clientWidth * 2;
+        console.log(double == boxWidth);
+        if (boxWidth == 0) {
+            setBtnColorLeft("#e11c93");
+            setBtnColorRight("#e11c93");
+            setIsBtn(false);
+        } else if (boxWidth == clientWidth) {
+            setBtnColorRight("#e11c9259");
+            setIsBtn(true);
+        } else if (boxWidth == clientWidth * 2) {
+            setBtnColorLeft("#e11c93");
+            setBtnColorRight("#e11c93");
+            setIsBtn(false);
+        } else if (boxWidth == clientWidth) {
+            setBtnColorLeft("#e11c9259");
+            setBtnColorRight("#e11c93");
+            setIsBtn(false);
+        }
+    };
 
     const rightArrowHandler = () => {
         const box: any = boxRef.current;
-        box != "undefined" && (box.scrollLeft += box.clientWidth);
-        // box.scrollLeft >= 0 && box.scrollLeft <= 450
-        //     ? setBtn(true)
-        //     : setBtn(false),
-        // console.log(box.scrollLeft)
+        box != "undefined" &&
+            ((box.scrollLeft += box.clientWidth),
+            btnColorHandler(box.scrollLeft, box.clientWidth),
+            console.log(box.scrollLeft),
+            console.log(box.scrollLeft === 0));
     };
 
     const leftArrowHandler = () => {
         const box: any = boxRef.current;
-        box != "undefined" && (box.scrollLeft -= box.clientWidth);
-        // box.scrollLeft >= 450 && box.scrollLeft >= 500
-        //     ? setBtn(true)
-        //     : setBtn(false),
-        // console.log(box.scrollLeft);
+        box != "undefined" &&
+            ((box.scrollLeft -= box.clientWidth),
+            btnColorHandler(box.scrollLeft, box.clientWidth),
+            console.log("scrool - " + box.scrollLeft),
+            console.log("width - " + box.clientWidth));
     };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
+    // useEffect(() => {
+    //     setBtnColorLeft("#e11c9259");
+    //     setBtnColorRight("#e11c93");
+    // });
 
     return (
         <>
-            <div className="relative flex snap-center flex-col items-center justify-center  md:mb-0 md:h-[100vh] md:flex-row">
+            <div className="relative flex flex-col items-center justify-center  md:mb-0 md:h-[100vh] md:flex-row">
                 <div
                     ref={boxRef}
                     className="custom-scrollbar main-container mx-2 flex w-[100%] snap-x snap-mandatory items-start overflow-x-hidden overflow-y-hidden scroll-smooth md:mb-10 md:block md:h-[100%] md:w-[100%] md:snap-y md:snap-mandatory md:flex-col md:items-center md:justify-center md:gap-6 md:overflow-x-auto md:overflow-y-auto"
@@ -94,9 +120,10 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                 </div>
             </div>
             <div className="mx-8 grid grid-cols-2 gap-2  rounded-full bg-[#FDEDF1] px-2 py-2 md:hidden">
-                <div
+                <button
                     onClick={leftArrowHandler}
-                    className={`flex items-center justify-center rounded-full bg-[#e11c9259]`}
+                    className={`flex items-center justify-center rounded-full  `}
+                    style={{ backgroundColor: `${btnColorLeft}` }}
                 >
                     <Image
                         src={LeftArrowLight}
@@ -105,10 +132,12 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                         width={20}
                         height={20}
                     />
-                </div>
-                <div
+                </button>
+                <button
+                    disabled={isBtn}
                     onClick={rightArrowHandler}
-                    className={`flex w-full items-center justify-center rounded-full bg-[#e11c93]`}
+                    className={`flex w-full items-center justify-center rounded-full `}
+                    style={{ backgroundColor: `${btnColorRight}` }}
                 >
                     <Image
                         src={RightArrow}
@@ -117,7 +146,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                         width={20}
                         height={20}
                     />
-                </div>
+                </button>
             </div>
         </>
     );
