@@ -34,11 +34,11 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
         } else if (boxWidth == clientWidth) {
             setBtnColorRight("#e11c9259");
             setIsBtn(true);
-        } else if (boxWidth == clientWidth * 2) {
+        } else if (boxWidth == clientWidth * 2 - 2) {
             setBtnColorLeft("#e11c93");
             setBtnColorRight("#e11c93");
             setIsBtn(false);
-        } else if (boxWidth == clientWidth) {
+        } else if (boxWidth < clientWidth) {
             setBtnColorLeft("#e11c9259");
             setBtnColorRight("#e11c93");
             setIsBtn(false);
@@ -55,10 +55,12 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
     };
 
     const leftArrowHandler = () => {
+        let scroll = 0;
         const box: any = boxRef.current;
         box != "undefined" &&
-            ((box.scrollLeft -= box.clientWidth),
-            btnColorHandler(box.scrollLeft, box.clientWidth),
+            ((box.scrollLeft = box.scrollLeft - box.clientWidth),
+            (scroll = box.scrollLeft - 2),
+            btnColorHandler(scroll, box.clientWidth),
             console.log("scrool - " + box.scrollLeft),
             console.log("width - " + box.clientWidth));
     };
