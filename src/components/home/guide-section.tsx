@@ -10,6 +10,8 @@ import Feature2 from "../../../public/home/Feature-2.png";
 import Feature3 from "../../../public/home/Feature-3.png";
 import LeftArrow from "../../../public/home/left-arrow.svg";
 import RightArrow from "../../../public/home/right-arrow.svg";
+import RightArrowLight from "../../../public/home/right-arrow-lowshade.svg";
+import LeftArrowLight from "../../../public/home/left-arrow-lowshade.svg";
 import { useEffect, useRef, useState } from "react";
 
 interface StepsSectionProps {}
@@ -89,15 +91,27 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
             <div className="mx-8 grid grid-cols-2 gap-2  rounded-full bg-[#FDEDF1] px-2 py-2 md:hidden">
                 <div
                     onClick={leftArrowHandler}
-                    className={`flex items-center justify-center rounded-full bg-[#e11c93]`}
+                    className={`flex items-center justify-center rounded-full bg-[#e11c9259]`}
                 >
-                    <Image src={LeftArrow} className="py-4" alt="" />
+                    <Image
+                        src={LeftArrowLight}
+                        className="py-3"
+                        alt=""
+                        width={20}
+                        height={20}
+                    />
                 </div>
                 <div
                     onClick={rightArrowHandler}
                     className={`flex w-full items-center justify-center rounded-full bg-[#e11c93]`}
                 >
-                    <Image src={RightArrow} alt="" className="py-4" />
+                    <Image
+                        src={RightArrow}
+                        alt=""
+                        className="py-3"
+                        width={20}
+                        height={20}
+                    />
                 </div>
             </div>
         </>
