@@ -25,7 +25,7 @@ export const GuideStep: React.FC<StepsSectionProps> = ({
 }) => {
     return (
         <>
-            <div className="hidden h-[90vh] w-[100%] flex-row items-center justify-around p-20 md:flex">
+            <div className="hidden h-[90vh] w-[100%] flex-row items-center justify-around  p-20 md:flex">
                 <div className="gradient-primary-conic flex h-[400px] w-[400px] items-center justify-center rounded-full lg:h-[550px] lg:w-[550px]">
                     <div
                         className={`h-[400px] w-[250px] translate-y-10 rounded-3xl lg:h-[520px] lg:w-auto ${imageOffset}`}
@@ -50,7 +50,9 @@ export const GuideStep: React.FC<StepsSectionProps> = ({
                     </div>
                 </div>
             </div>
-            <div className="flex w-[100vw] flex-col items-center justify-around gap-24  px-8 pb-10 md:hidden">
+
+            {/* MOBILE VIEW  */}
+            <div className="flex flex-col items-center  gap-24  px-8 pb-10 md:hidden">
                 <div className="gradient-primary-conic flex h-[300px] w-[300px] items-center justify-center rounded-full ">
                     <div
                         className={` ${imageOffsetMobile} translate-y-[50px]  w-[${width}px] h-[${height}px]`}

@@ -9,9 +9,6 @@ import { useEffect } from "react";
 
 export interface HomePageProps {}
 const HomePage: React.FC<HomePageProps> = ({}) => {
-    // let w = window;
-    // document.addEventListener("keydown", () => console.log("clicked"));
-    // console.log(w);
     return (
         <>
             <Header />
