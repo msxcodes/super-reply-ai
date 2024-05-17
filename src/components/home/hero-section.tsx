@@ -147,7 +147,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({}) => {
                                 <Link href={"/signin"}>Get Started</Link>
                             </Button>
 
-                            <div className="flex items-center justify-center gap-2 pb-2 md:flex-col md:gap-3">
+                            <div className="flex items-center justify-center gap-2 pb-2 md:my-4 md:gap-3">
                                 <Image
                                     className="flex w-16 items-center justify-center xs:w-[5.5rem]"
                                     alt=""

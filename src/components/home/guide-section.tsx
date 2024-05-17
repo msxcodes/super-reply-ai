@@ -28,7 +28,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
     return (
         <>
             <div className=" relative flex-col items-center justify-center md:mb-0  md:flex md:h-[100vh] md:flex-row">
-                <div className="custom-scrollbar  main-container flex w-[100%] snap-mandatory items-center  md:mx-2  md:mb-10 md:block md:h-[100%] md:w-[100%] md:snap-y md:snap-mandatory md:flex-col md:items-center md:justify-center md:gap-6 md:overflow-x-auto md:overflow-y-auto">
+                <div className="custom-scrollbar main-container  flex w-[100%] snap-mandatory items-center  md:mx-2  md:mb-10 md:block md:h-[100%] md:w-[100%] md:snap-y md:snap-mandatory md:flex-col md:items-center md:justify-center md:gap-6 md:overflow-x-auto md:overflow-y-auto">
                     {/* DESKTOP VIEW SCROLL */}
                     <div className="hidden snap-center snap-always md:block">
                         <GuideStep
@@ -74,10 +74,10 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                     </div>
 
                     {/* MOBILE VIEW SCROLL  */}
-                    <Carousel className="w-full  md:hidden">
+                    <Carousel className="w-full md:hidden">
                         <CarouselContent>
                             <CarouselItem>
-                                <div className="">
+                                <div className="py-0">
                                     <GuideStep
                                         stepNum={"1 :"}
                                         stepName={"Comment"}
@@ -125,7 +125,7 @@ export const GuideSection: React.FC<StepsSectionProps> = ({}) => {
                                 </div>
                             </CarouselItem>
                         </CarouselContent>
-                        <div className="mx-8 grid grid-cols-2 gap-2  rounded-full bg-[#FDEDF1] px-2 py-2">
+                        <div className="mx-8 grid grid-cols-2 gap-2 rounded-full bg-[#FDEDF1] px-2 py-2">
                             <CarouselPrevious />
                             <CarouselNext />
                         </div>

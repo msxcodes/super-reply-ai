@@ -16,9 +16,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
     };
     return (
         <>
-            <header className="fixed left-0 right-0 top-0 z-50 flex w-full justify-between bg-white px-4 py-8 md:py-6 md:px-20 lg:px-32">
+            <header className="fixed left-0 right-0 top-0 z-50 flex w-full justify-between bg-white px-4 py-8 md:px-20 md:py-6 lg:px-32">
                 {navVis && (
-                    <div className="absolute md:hidden left-0 top-0 z-10 h-[100vh] w-full bg-white p-5">
+                    <div className="absolute left-0 top-0 z-10 h-[100vh] w-full bg-white p-5 md:hidden">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center justify-between gap-2">
                                 <div className="h-7 w-7 flex-shrink-0 md:h-8 md:w-8">
@@ -43,8 +43,8 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                         </div>
                         <div className="m-4">
                             <nav className="w-full">
-                                <ul className="flex flex-col w-full items-center justify-center pt-[80px] gap-4 font-space-grotesk">
-                                    <div className="border-b-2 w-full"></div>
+                                <ul className="flex w-full flex-col items-center justify-center gap-4 pt-[80px] font-space-grotesk">
+                                    {/* <div className="w-full border-b-2"></div>
                                     <li className="">
                                         <Button
                                             asChild
@@ -52,10 +52,15 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                                             size={"sm"}
                                             className="rounded-full"
                                         >
-                                            <Link href={"#"} className="text-xl">Pricing</Link>
+                                            <Link
+                                                href={"#"}
+                                                className="text-xl"
+                                            >
+                                                Pricing
+                                            </Link>
                                         </Button>
-                                    </li>
-                                    <div className="border-b-2 w-full"></div>
+                                    </li> */}
+                                    {/* <div className="w-full border-b-2"></div> */}
                                     <li>
                                         <Button
                                             asChild
@@ -63,7 +68,12 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                                             variant={"ghost"}
                                             className="rounded-full border-primary"
                                         >
-                                            <Link href={"#"} className="text-xl">Get Demo</Link>
+                                            <Link
+                                                href={"#"}
+                                                className="text-xl"
+                                            >
+                                                Get Demo
+                                            </Link>
                                         </Button>
                                     </li>
                                     <li>
@@ -72,7 +82,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                                             size={"sm"}
                                             className="rounded-full"
                                         >
-                                            <Link href={"/signin"}>Get Started</Link>
+                                            <Link href={"/signin"}>
+                                                Get Started
+                                            </Link>
                                         </Button>
                                     </li>
                                 </ul>
@@ -102,7 +114,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                 </div>
                 <nav className="hidden items-center md:flex">
                     <ul className="flex gap-3 font-space-grotesk">
-                        <li>
+                        {/* <li>
                             <Button
                                 asChild
                                 variant={"ghost"}
@@ -111,15 +123,15 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                             >
                                 <Link href={"#"}>Pricing</Link>
                             </Button>
-                        </li>
+                        </li> */}
                         <li>
                             <Button
                                 asChild
                                 size={"lg"}
                                 variant={"outline"}
-                                className="rounded-full border-primary border-2 text-lg font-semibold"
+                                className="rounded-full border-2 border-primary text-lg font-semibold"
                             >
-                                <Link href={"#"} >Get Demo</Link>
+                                <Link href={"#"}>Get Demo</Link>
                             </Button>
                         </li>
                         <li>

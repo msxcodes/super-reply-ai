@@ -52,7 +52,7 @@ export const GuideStep: React.FC<StepsSectionProps> = ({
             </div>
 
             {/* MOBILE VIEW  */}
-            <div className="flex flex-col items-center  gap-24  px-8 pb-10 md:hidden">
+            <div className="flex flex-col items-center  gap-24  px-8 pb-5 md:hidden">
                 <div className="gradient-primary-conic flex h-[300px] w-[300px] items-center justify-center rounded-full ">
                     <div
                         className={` ${imageOffsetMobile} translate-y-[50px]  w-[${width}px] h-[${height}px]`}
